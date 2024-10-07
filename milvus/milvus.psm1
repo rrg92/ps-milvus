@@ -173,6 +173,15 @@ function Add-MilvusVector {
 	
 }
 
+function Set-MilvusEmbeddingConverter {
+	param(
+		$command
+	)
+	
+	$Global:MILVUS_CLIENT_DATA.Converter = $command;
+}
+
+
 <#
 	.SYNOPSIS
 		Search data in Milvus and returns
@@ -181,6 +190,7 @@ function Search-MilvusVector {
 	[CmdletBinding()]
 	param(
 		 #Embedding to search 
+		 #If this a string, then it will call command set in Set-MilvusEmbeddingConverter
 			$embeddings
 			
 		,#Field where check 
@@ -201,6 +211,17 @@ function Search-MilvusVector {
 		,#Db name. If null, use defaults set in Connect-Milvus
 			$CollectionName	= $null
 	)
+	
+	if($embeddings -is [string]){
+		$ConverterCommand = $Global:MILVUS_CLIENT_DATA.Converter;
+		
+		if($ConverterCommand){
+			$embeddings = & $ConverterCommand $embeddings
+		} else {
+			throw "MILVUS_CONVERTERCOMMAND_NOTSET: Must set a converter command with Set-MilvusEmbeddingConverter"
+		}
+		
+	}
 	
 	$ReqData 		= @{
 		data 		= ,$embeddings
