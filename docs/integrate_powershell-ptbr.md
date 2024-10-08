@@ -27,7 +27,7 @@ O comando abaixo é um simples exemplo de como você poderia usar o módulo para
 
 Para o exemplo abaixo, iremos usar uma collection chamada winlogs, no banco chamado IaTalking. A estrutura é essa:
 
-[!Estrutura da collection winlogs](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleWinLogs.png)
+![Estrutura da collection winlogs](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleWinLogs.png)
 
 ```powershell 
 
@@ -57,13 +57,13 @@ Search-MilvusVector -limit 10 (GetEmbedding "performance problems") -outputField
 Abaixo algumas imagens do comandos acima executados em Milvus local de teste:
 
 _Inserindo dados_
-[!inserindo](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSamplePowershell.png)
+![inserindo](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSamplePowershell.png)
 
 _Dados inseridos, visto pelo Attu_
-[!dados attu](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleInsertedUi.png)
+![dados attu](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleInsertedUi.png)
 
 _Buscando dados_
-[!buscando](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleSearch.png)
+![buscando](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleSearch.png)
 
 
 

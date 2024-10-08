@@ -27,7 +27,7 @@ The command below is a simple example of how you could use the module to index t
 
 For the example below, we will use a collection called winlogs, in the database called IaTalking. The structure is this:
 
-[!Winlogs collection structure](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleWinLogs.png)
+![Winlogs collection structure](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleWinLogs.png)
 
 ```powershell 
 
@@ -57,13 +57,13 @@ Search-MilvusVector -limit 10 (GetEmbedding "performance problems") -outputField
 Below are some images of the above commands executed in a local test Milvus:
 
 _Inserting data_
-[!inserting](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSamplePowershell.png)
+![inserting](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSamplePowershell.png)
 
 _Inserted data, as seen by Attu_
-[!data attu](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleInsertedUi.png)
+![data attu](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleInsertedUi.png)
 
 _Searching data_
-[!searching](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleSearch.png)
+![searching](https://iatalk.ing/wp-content/uploads/2024/10/MilvusSampleSearch.png)
 
 
 
